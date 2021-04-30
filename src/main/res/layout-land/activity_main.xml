@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/previousTextView"
+        android:layout_width="334dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="39dp"
+        android:text="you spent 00:00:00 on workout last time"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        app:layout_constraintBottom_toTopOf="@+id/timerTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="334dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginEnd="199dp"
+        android:layout_marginBottom="20dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toTopOf="@+id/stopBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previousTextView" />
+
+    <EditText
+        android:id="@+id/workoutType"
+        android:layout_width="155dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="212dp"
+        android:layout_marginBottom="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/stopBtn" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="32dp"
+        android:text="Enter your workout type"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workoutType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseBtn" />
+
+    <ImageButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="Pause"
+        app:layout_constraintBottom_toTopOf="@+id/workoutType"
+        app:layout_constraintEnd_toStartOf="@+id/stopBtn"
+        app:layout_constraintStart_toEndOf="@+id/startBtn"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_pause_24" />
+
+    <ImageButton
+        android:id="@+id/stopBtn"
+        android:layout_width="101dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="Stop"
+        app:layout_constraintBottom_toTopOf="@+id/workoutType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView"
+        app:srcCompat="@android:drawable/ic_notification_overlay" />
+
+    <ImageButton
+        android:id="@+id/startBtn"
+        android:layout_width="98dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="Start"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/pauseBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
